@@ -1,0 +1,11 @@
+/*** FILE CSS PER LE PRENOTAZIONI ***/
+/* FORM */
+#racketNeededGroup label.form-label {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+#racketNeededGroup .form-text {
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}

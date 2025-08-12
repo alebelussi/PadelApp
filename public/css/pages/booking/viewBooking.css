@@ -1,0 +1,57 @@
+/*** STILE DELLA PAGINA DI VISUALIZZAZIONE DELLE PRENOTAZIONI ***/
+.mt-150{
+    margin-top: 125px;
+}
+
+/* => BUTTON */
+.fc-toolbar button {
+    background-color: #0D47A1 !important;
+    transition: transform 0.3s ease;
+    font-size: 12px !important;
+    text-transform: capitalize !important;
+}
+
+.fc-toolbar button:hover {
+    color: #E4E1B6;
+    transform: scale(1.05);   /* => Ingrandisce del 5% */
+    transition: transform 0.3s ease;
+}
+
+.fc-toolbar button:focus {  /* => Toglie la selezionatura */
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* => INTESTAZIONE TABELLA */
+.fc-col-header-cell-cushion {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #0D47A1;
+}
+
+/* => TESTO DATA CENTRALE INTESTAZIONE */
+.fc-toolbar-title {
+    text-transform: capitalize;
+}
+
+/* => EVENTO */
+.fc-event {
+    background-color: #0D47A1 !important;
+    border-color: #0D47A1 !important;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    transform-origin: center center;
+}
+
+.fc-event:hover {
+    transform: scale(1.05);
+    padding: 3px;
+}
+
+/* SFONDO DEL GIORNO ODIERNO */
+.fc-timegrid-col.fc-day-today { /* => Cambia il colore di sfondo della colonna del giorno corrente */
+    background-color: #74acffaa !important; 
+}
+
+.fc-col-header-cell.fc-day-today {  /* => Tolgo lo sfondo dall'header del giorno odierno */
+    background-color: transparent !important;
+}

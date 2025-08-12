@@ -1,0 +1,93 @@
+/*** FILE CSS PER L'AGGIUNTA DI NUOVE STRUTTURE ***/
+
+/********* FORM *******/
+
+/* => COLONNA DESTRA: posizione relativa per ::before */
+.col-md-6.bg-column {
+    position: relative;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+/* => before: pseudo - elemento CSS (virtuale) che viene creato prima del contenuto di un elemento*/
+.col-md-6.bg-column::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../image/complex-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    z-index: -1;  /* => Imposta sotto al contenuto */
+    filter: brightness(0.85); /* => Per miglior contrasto */
+}
+
+.col-md-6.bg-column input {
+    background-color: rgba(255, 255, 255, 0.55);
+    box-sizing: border-box;
+}
+
+/* => FRECCE */
+.swiper-button-next,
+.swiper-button-prev {
+    margin-left: auto !important; 
+    margin-right: auto !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px !important;
+    color: #0D47A1 !important;
+    line-height: 1 !important;
+    display: flex !important;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    transform: scale(1.2); 
+}
+
+/* => CARD - GESTIONE CHIUSURA */
+.card-body {
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5 ease;
+    max-height: 300px;
+    opacity: 1;
+}
+
+.card-body-closed { /* => Chiude il body */
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.card.closed-full {
+    min-height: 100px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* => Posiziona l'header card al centro della riga */
+    border: none !important;    /* => Toglie il bordo della card */
+    background-color: #f8f8f2 !important; 
+}
+
+.card.closed-full .card-header {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.125); /* => Bordo di default di bootstrap */
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+/* => CARD NORMALE */
+.mt-100 {
+    margin-top: 100px;
+}

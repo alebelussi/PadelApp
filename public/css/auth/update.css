@@ -1,0 +1,117 @@
+/* stile base bottoni */
+.btn-color {
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    white-space: nowrap;
+    width: 100%; 
+    max-width: 180px; 
+}
+
+/* bottoni primari */
+.btn-primary {
+    background-color: #0D47A1 !important;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0D47A1;
+    transform: scale(1.05);
+    color: #E4E1B6;
+}
+
+/* bottone secondario */
+.btn-secondary {
+    background-color: #000; /* nero */
+    opacity: 0.5; 
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #000;
+    transform: scale(1.05);
+    color: #E4E1B6;
+}
+
+/* bottone elimina (rosso) */
+.btn-danger {
+    background-color: #a10d19 !important;
+    transition: transform 0.3s ease;
+}
+  
+.btn-danger:hover {
+    color: #E4E1B6;
+    transform: scale(1.05);   /* => Ingrandisce del 5% */
+    transition: transform 0.3s ease;
+}
+
+.btn.btn-link {
+    color: #0D47A1;
+}
+
+
+.status-message {
+    background-color: #47fcab; 
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    animation: fadeIn 0.4s ease forwards;
+    user-select: none;
+    max-width: 480px;
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* animazione fadeIn */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-12px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.status-error {
+    background-color: #a10d19;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.6);
+    text-align: center;
+    user-select: none;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+}
+
+/*foto profilo*/
+.profile-photo-container img {
+    width: 60px;       /* dimensione immagine */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.gap-3 {
+    gap: 1rem; /* spazio tra immagine e input */
+}
+
+.modal {
+    z-index: 9999 !important;
+}
+
+.modal-backdrop {
+    z-index: 9998 !important;
+}

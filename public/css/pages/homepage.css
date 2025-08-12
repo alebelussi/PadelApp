@@ -1,0 +1,294 @@
+/**** STILE HOME PAGE****/
+body {
+  overflow-x: hidden;
+}
+
+/* IMMAGINE DI SFONDO */
+.image-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../../image/homepage-bg.webp'); 
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* SEZIONE */
+.section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.1); /* Semitrasparente */
+  color: #E4E1B6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+/* TITOLO */
+.title {
+  text-align: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(1);
+  transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 0;
+  margin-bottom: 1rem;
+
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+/* SOTTOTITOLO */
+.subtitle {
+  transform: scale(1);
+  transition: all 3.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 0;
+  margin-bottom: 1rem;
+
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0;
+}
+
+/* SOTTOTITOLO IN INGRESSO */
+.section.in-page .title,
+.section.in-page .subtitle {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.section .subtitle {
+  margin: 0;
+  font-weight: normal;
+  color: #E4E1B6;
+  text-align: center;
+}
+
+.section.in-page .title {
+  transform: scale(1.2);
+
+  opacity: 1;
+}
+
+/* PANNELLO - SECONDA SEZIONE E ALTRE*/
+.panel {
+  background-color: #f8f8f2;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.panel-header {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+}
+
+.panel-header h2 {
+  color: #0D47A1;
+  margin-top: 30px;
+}
+
+.panel-header h4 {
+  margin-bottom: 50px; 
+  margin-top: 0px;
+  font-size: 22px;
+}
+
+/* Navbar: modifica del coloro delle voci menu */
+.nav-link {
+  color: #FDF5E6;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #E4E1B6;
+}
+
+.navbar-brand img {
+  margin-left: 15px;
+  width: 75px;
+  height: auto;
+}
+
+/******* GESTIONE MENU STICKY ********/
+/* Navbar: stile di partenza */
+.custom-navbar {
+  position: fixed;               
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;                 
+  background-color: transparent !important;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-navbar.sticky {
+  position: fixed;   
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0D47A1 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.custom-navbar.sticky .navbar-nav .nav-link {
+  color: #FDF5E6 !important;
+  font-weight: 600;
+}
+
+.custom-navbar.sticky .navbar-brand {
+  width: 50px;
+  height: auto;
+}
+
+.custom-navbar.sticky .navbar-nav .nav-link:hover {
+  color: #E4E1B6 !important;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* => Stile specifico per il dropdown profilo, per mantenere l’immagine centrata */
+#userDropdown.nav-link {
+  padding: 0;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+/********  STYLE CAROUSEL  ********/
+.carousel-indicators {
+  position: static; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.carousel-indicators button[type="button"] {
+  background-color: #0D47A1 !important;
+  opacity: 0.7;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% !important;
+  border: none !important;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1 !important;
+}
+
+.carousel-indicators button[type="button"]:hover {
+  opacity: 1 !important;
+}
+
+/*** BUTTON ***/
+.btn {
+  background-color: #0D47A1 !important;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  color: #E4E1B6;
+  transform: scale(1.05);   /* => Ingrandisce del 5% */
+  transition: transform 0.3s ease;
+}
+
+
+/****** SEZIONE CON SFONDO ********/
+.bg-image {
+  background-image: url('../../image/bgSection.svg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  min-height: 500px;
+}
+
+div .bg-image {
+  margin-top: 150px;
+}
+
+/*** SEZIONE CON LE ICONE ***/
+
+div i {
+  margin-top: 50px;
+  font-size: 55px;
+  padding: 10px;
+}
+
+div i:hover {
+  color: #0D47A1;
+  font-size: 60px;
+}
+
+/**** SEZIONE CARD ****/
+.card-body {
+  position: relative;
+  min-height: 200px; 
+}
+
+.card-body .btn {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0 !important;
+}
+
+.card-body .btn:hover {
+  transform: translateX(-50%) scale(1.05);
+  background-color: #08306b !important;
+  color: #E4E1B6;
+}
+
+.panel .card {
+  min-height: 350px;
+}

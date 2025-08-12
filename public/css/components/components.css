@@ -1,0 +1,50 @@
+/** STILE PER I COMPONENTI **/
+.h1-color {
+    color: #0D47A1 !important;
+}
+
+/* => CONTAINER */
+.container-header {
+    margin-top: 75px;
+}
+
+/* => CONTAINER: Ombra e bordi arrotondati sul container */
+.container-section {
+    background-color: #f8f8f2; 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1); /* => Ombra leggera */
+    border-radius: 12px;
+    margin-top: 75px;
+}
+
+/* STILE BUTTON */
+.btn-color {
+    background-color: #0D47A1;
+    color: #f8f8f2;
+    transition: transform 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+.btn-color:hover {
+    background-color: #0D47A1;
+    transform: scale(1.05);
+    color: #E4E1B6;
+}
+
+.btn-primary {
+    background-color: #0D47A1 !important;
+    transition: transform 0.3s ease;
+}
+
+.btn-danger {
+    background-color: #a10d19 !important;
+    transition: transform 0.3s ease;
+}
+  
+.btn-primary:hover,
+.btn-danger:hover {
+    color: #E4E1B6;
+    transform: scale(1.05);   /* => Ingrandisce del 5% */
+    transition: transform 0.3s ease;
+}

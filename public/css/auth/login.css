@@ -1,0 +1,77 @@
+/* Contenitore principale del form */
+.auth-content {
+  max-width: 600px;       /* più largo su desktop */
+  margin: 2rem auto;      /* centro orizzontalmente con margine verticale */
+  padding: 3rem;          /* padding più ampio */
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Bordo più spesso per gli input */
+.auth-content .form-control {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+/* Bordo più spesso e colore diverso quando il campo è in focus */
+.auth-content .form-control:focus {
+  border-color: #0D47A1; /* viola, come il link */
+  box-shadow: 0 0 0 0.25rem rgba(102, 16, 242, 0.25);
+}
+
+/* Errori di validazione in rosso */
+.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Messaggi di stato in verde */
+.text-success {
+  color: #28a745 !important;
+}
+
+/* Link recupero password */
+a.text-primary {
+  color: #0D47A1;
+  transition: color 0.3s ease;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #0D47A1;
+  text-decoration: underline;
+}
+
+/* Checkbox */
+.form-check-input:checked {
+  background-color: #0D47A1;
+}
+
+/* Regole responsive per schermi piccoli */
+@media (max-width: 576px) {
+  .auth-content {
+    margin: 1rem;
+    padding: 1.5rem;
+    max-width: 100%;   /* piena larghezza su mobile */
+  }
+
+  /* Bottone login full width e margine sopra per distanziare dal link */
+  .auth-content .btn {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  /* Flex container-> metti link sopra il bottone e allinea al centro */
+  .auth-content .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .auth-content .d-flex a {
+    margin-bottom: 0 !important;
+    text-align: center;
+  }
+}

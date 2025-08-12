@@ -1,0 +1,38 @@
+.modal-confirm .modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-confirm .modal-title {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.modal-confirm p {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.modal-confirm .form-control {
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.modal-confirm .btn-danger {
+    background-color: #a10d19;
+    border: none;
+}
+
+.modal-confirm .btn-danger:hover {
+    background-color: #870f15;
+    color: #f8f8f2;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}

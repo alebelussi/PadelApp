@@ -1,0 +1,60 @@
+/*** STILE FORM COURT PAGE ***/
+/* => CONTAINER: Ombra e bordi arrotondati sul container */
+.container {
+  background-color: #f8f8f2; 
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1); /* => Ombra leggera */
+  border-radius: 12px;
+  margin-top: 50px;
+}
+
+/* => COLONNA DESTRA: posizione relativa per ::before */
+.col-md-6.bg-column {
+  position: relative;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* => before: pseudo - elemento CSS (virtuale) che viene creato prima del contenuto di un elemento*/
+.col-md-6.bg-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../../image/formCourt-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  z-index: -1;  /* => Imposta sotto al contenuto */
+  filter: brightness(0.85); /* => Per miglior contrasto */
+}
+
+/* STILE SELECT */
+.bg-column select.custom-select,
+.bg-column input.form-control {
+  width: 100%;           
+  background-color: rgba(255, 255, 255, 0.55); /* => Bianco semi-trasparente */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 8px 12px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* => Placeholder */
+.bg-column select.custom-select::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.bg-column input {
+  color: #333;
+}

@@ -1,0 +1,101 @@
+.profile-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.profile-row {
+    display: flex;
+    margin-bottom: 10px; /* spazio verticale tra le righe */
+    align-items: center;
+}
+
+.label {
+    width: 180px;       /* larghezza fissa per le etichette */
+    font-weight: 600;
+    text-align: right;
+    padding-right: 20px;
+    color: #69758b;     
+    user-select: none;  /* non selezionabile */
+}
+
+.value {
+    flex: 1;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #1b1e23;   
+}
+
+.button-row {
+    display: flex;
+    justify-content: center; 
+    margin-top: 30px;
+    gap: 1rem; /* spazio uniforme tra i bottoni */
+}
+
+/* stile base bottoni */
+.btn-color {
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    min-width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* altezza fissa per allineare */
+}
+
+/* bottoni primari */
+.btn-primary {
+    background-color: #0D47A1 !important;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0D47A1;
+    transform: scale(1.05);
+    color: #E4E1B6;
+}
+
+/* bottone secondario */
+.btn-secondary {
+    background-color: #000; /* nero */
+    opacity: 0.5; 
+    border: 1px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+    background-color: #000;
+    transform: scale(1.05);
+    color: #E4E1B6;
+}
+
+.btn.btn-link {
+    color: #0D47A1;
+}
+
+/* foto profilo */
+.profile-photo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0; 
+}
+
+.profile-photo {
+    border-radius: 9999px;  
+    width: 160px;           
+    height: 160px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    border: 2px solid #0D47A1; 
+}
+
+h2 {
+    font-size: 3rem; 
+    font-weight: 700;  
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 2.5rem; 
+}

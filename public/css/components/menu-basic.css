@@ -1,0 +1,72 @@
+/* STILE NAVBAR */
+
+.nav-link {
+    color: #FDF5E6;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+  
+.nav-link:hover {
+    color: #E4E1B6;
+}
+  
+.custom-navbar {
+    position: fixed;   /* => Fissa la navbar in cima */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0D47A1 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1030; 
+}
+  
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-brand {
+    color: #FDF5E6 !important;
+    font-weight: 600;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+    color: #E4E1B6 !important;
+}
+
+/* => Centra verticalmente i link nella navbar */
+.custom-navbar .navbar-nav {
+    display: flex;         
+    align-items: center;   /* => Centra verticalmente */
+}
+
+/* => Centra verticalmente anche il logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-left: 15px;
+    width: 50px;
+    height: auto;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* => Stile specifico per il dropdown profilo, per mantenere l’immagine centrata */
+#userDropdown.nav-link {
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
