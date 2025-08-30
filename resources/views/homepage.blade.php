@@ -17,9 +17,13 @@
     <div class="image-bg"></div>
 
     <!-- 1° SEZIONE SULL'IMMAGINE-->
-    <div id="section1" class="section watch">
-        <h2 class="title fst-italic">Divertimento e sport a portata di mano!</h2> <br>
-        <h4 class="subtitle">Scegli il campo perfetto e <br> prenota subito per un'esperienza indimenticabile</h4>
+    <div id="section1" class="section watch text-center py-5">
+        <h2 class="title fst-italic display-6 display-md-6">
+            Divertimento e <br> sport a portata di mano!
+        </h2>
+        <h4 class="subtitle mt-3">
+            Scegli il campo perfetto e <br> prenota subito per un'esperienza indimenticabile
+        </h4>
     </div>
 
     <!-- 2° SEZIONE-->

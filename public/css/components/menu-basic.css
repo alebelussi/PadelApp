@@ -70,3 +70,45 @@
     display: inline-block;
     margin-right: 5px;
 }
+
+@media (max-width: 991px) { /* breakpoint mobile/tablet */
+    .navbar-collapse {
+        min-height: 100vh;  /* altezza minima full-screen */
+        overflow-y: auto;   /* scroll se necessario */
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        transition: all 0.7s ease; /* rendi l’apertura più fluida */
+    }
+
+    .navbar-collapse .navbar-nav {
+        flex-direction: column; 
+        justify-content: flex-start; /* inizia dall’alto */
+        align-items: center;         /* centra orizzontalmente i link */
+        gap: 3rem;                   /* distanza tra i link */
+        width: 100%;                  /* menu link larga tutta la navbar */
+        text-align: center;           /* centra il testo */
+    }
+
+    /* Eventuale riduzione margine logo o dropdown per mobile */
+    .navbar-collapse .navbar-brand {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-collapse .nav-item .dropdown-menu {
+        position: static; /* dropdown interno al flusso del menu verticale */
+        float: none;
+        width: auto;
+        margin-top: 0.5rem;
+    }
+
+    /* Migliora visibilità dei link */
+    .navbar-collapse .nav-link {
+        font-size: 1.25rem;   /* link più grandi su mobile */
+        padding: 0.5rem 1rem; /* padding verticale maggiore */
+    }
+}
+
+

@@ -1,17 +1,15 @@
 /*** STILE CARD CAMPI ***/
 .card-header {
-    height: 200px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa;
-  }
+  height: 200px;
+  padding: 0;
+  background-color: #f8f9fa;
+  overflow: hidden; /* evita che l'immagine fuoriesca */
+}
 
 .card-header img {
-    max-height: 100%;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* riempie l'intero contenitore mantenendo le proporzioni */
+  border-radius: 1px;
+  display: block;
 }
